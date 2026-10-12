@@ -1,0 +1,9 @@
+2026-10-10 14:32:01 | INFO | 192.168.1.10 | User logged in
+2026-10-10 14:32:05 | ERROR | 192.168.1.12 | Database connection failed
+2026-10-10 14:32:01 | INFO | 192.168.1.10
+2026-10-10 14:32:01 INFO 192.168.1.10 User logged in
+2026-10-10 14:32:08 | WARNING | 192.168.1.10 | Too many requests
+2026-10-10 14:32:01 | BANANA | 192.168.1.10 | User logged in
+2026-10-10 14:32:10 | ERROR | 192.168.1.12 | Database connection failed
+ | INFO | 192.168.1.10 | User logged in
+2026-10-10 14:32:15 | INFO | 192.168.1.15 | Page loaded
