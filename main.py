@@ -1,6 +1,5 @@
 from statistics import mode
 
-logs = []
 valid_logs = []
 skipped_logs = []
 error_count = 0
@@ -60,13 +59,13 @@ def get_most_frequent_ip(logs_list, IPS_list): # Print most frequent IP address
     return mode(IPS_list)
 
 # DEFINE ALL VARIABLES
-logs, skipped_logs = verify_logs(get_logs(logs), valid_logs, skipped_logs)
-error_count, warning_count, info_count = count_logs(error_count, warning_count, info_count, logs)
-most_frequent_error = get_most_frequent_error(logs, error_messages)
-most_frequent_ip = get_most_frequent_ip(logs, IPS)
+valid_logs, skipped_logs = verify_logs(get_logs(valid_logs), valid_logs, skipped_logs)
+error_count, warning_count, info_count = count_logs(error_count, warning_count, info_count, valid_logs)
+most_frequent_error = get_most_frequent_error(valid_logs, error_messages)
+most_frequent_ip = get_most_frequent_ip(valid_logs, IPS)
 
 # PRINT RESULTS
-print(f"Total logs: {len(logs)}")
+print(f"Total logs: {len(valid_logs)}")
 print(f"Error count: {error_count}")
 print(f"Warning count: {warning_count}")
 print(f"Info count: {info_count}")
